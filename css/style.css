@@ -5,23 +5,24 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2F80ED, #56CCF2);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    overflow-x: hidden;
+    max-width: 100vw;
+    overflow-x: hidden !important;
 }
-main{
-    min-height: 80vh;
+.illustration{
+    background: url(../img/illustration.jpg) no-repeat center/contain;
+    height: 55vh;
+    width: 100%;
+    animation: show .7s ease-in-out .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
-.task-done{
-    animation: done .8s  .1s;
-    background-color: #2F80ED;
-}
-
-@keyframes done {
+@keyframes show {
     from{
+        transform: scale(0);
     }
     to{
-        background-color: chartreuse;
-        opacity: .8;
+        opacity: 1;
+        transform: scale(1);
     }
 }
